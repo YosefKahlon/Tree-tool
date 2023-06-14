@@ -104,6 +104,8 @@ int list(const char *name, const struct stat *status, int type, struct FTW *ftwb
     return 0;
 }
 
+
+
 int main(int argc, char *argv[]) {
 
     //current working directory
