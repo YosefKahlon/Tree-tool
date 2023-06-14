@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -std=c99
+CFLAGS=-Wall
 
 tree: tree.o
 	$(CC) $(CFLAGS) tree.o -o tree
@@ -7,5 +7,10 @@ tree: tree.o
 tree.o: tree.c
 	$(CC) $(CFLAGS) -c tree.c
 
+stree: stree.c
+	$(CC) $(CFLAGS) -o stree stree.c
+
+
+.PHONY: clean
 clean:
-	rm -f tree.o tree
+	rm -f tree.o tree stree
